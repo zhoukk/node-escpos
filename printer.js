@@ -98,7 +98,18 @@ Printer.prototype.println = function(content){
  * @return printer instance
  */
 Printer.prototype.text = function(content, encoding){
-  return this.print(iconv.encode(content + _.EOL, encoding || 'GB18030'));
+  return this.print(iconv.encode(content, encoding || 'GB18030'));
+};
+
+
+/**
+ * [function Print alpha-numeric text]
+ * @param  {[String]}  content  [description]
+ * @param  {[String]}  encoding [description]
+ * @return printer instance
+ */
+Printer.prototype.textln = function(content, encoding){
+    return this.print(iconv.encode(content + _.EOL, encoding || 'GB18030'));
 };
 
 /**
