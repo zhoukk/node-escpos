@@ -20,7 +20,7 @@ function Printer(adapter){
   var self = this;
   EventEmitter.call(this);
   this.adapter = adapter;
-  this.buffer = new Buffer();
+  this.buffer = new Buffer.MutableBuffer();
 };
 
 /**
